@@ -1,3 +1,4 @@
+```mermaid
 flowchart LR
     subgraph Inputs
         ExternalAIs[External AIs\n(ChatGPT, Claude, Grok, Gemini,\nCopilot, Music AIs, Video AIs, etc.)] -->|Prompts, Responses,\nObservations| IAI
@@ -34,23 +35,23 @@ flowchart LR
         IAI --> MultiAIMode
         IAI --> AIMusicMode
         IAI --> PersonalizationMode
-        IAI --> SingleAIMode
+        IAI --> SingleAIMMode
     end
 
-    %% Feedback Loops (self-improvement cycles)
+    %% Feedback Loops
     User -->|Choices • Ratings • Repeats| UserBehavior
     AppLogic -->|Workflow success metrics| Developers
     CreativeWorkflows -->|Tool usage patterns| MusicVideoTools
     MultiAIMode & AIMusicMode & PersonalizationMode & SingleAIMode -->|Engagement & Outcome Data| UserBehavior
 
-    classDef input    fill:#e6ffe6,stroke:#006600,stroke-width:2px
-    classDef core     fill:#e6f7ff,stroke:#0066cc,stroke-width:2.5px,font-weight:bold
-    classDef output   fill:#fff0e6,stroke:#cc6600,stroke-width:2px
-    classDef modes    fill:#f0e6ff,stroke:#6633cc,stroke-width:2px
+    classDef input    fill:#e6ffe6,stroke:#006600
+    classDef core     fill:#e6f7ff,stroke:#0066cc,font-weight:bold
+    classDef output   fill:#fff0e6,stroke:#cc6600
+    classDef modes    fill:#f0e6ff,stroke:#6633cc
 
     class ExternalAIs,MusicVideoTools,Developers,UserBehavior input
     class SkillMap,ConsensusEngine,RoutingLogic,MemoryStore,AnalysisScoring core
     class User,AppLogic,CreativeWorkflows output
     class MultiAIMode,AIMusicMode,PersonalizationMode,SingleAIMode modes
 
-    linkStyle default stroke:#666,stroke-width:1.5px
+    linkStyle default stroke:#666,stroke-width:1.5px```
